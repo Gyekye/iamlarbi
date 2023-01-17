@@ -2,13 +2,103 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lawyer Larbi</title>
-  </head>
-  <body>
-    <div id="root"></div>
+    <title>Lawyer Larbi Website</title>
+    <meta name="title" content="Lawyer Isaac M. Larbi" />
+    <meta name="keywords" content="Lawyer, Court, Law" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="1 day" />
+    <meta name="description" content="English" />
+    <meta name="author" content="Lawyer Larbi" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://imlarbilaw.com" />
+    <meta property="og:title" content="Lawyer Isaac M. Larbi" />
+    <meta
+      property="og:description"
+      content="With almost twenty (20) years of legal and management experience, my objective is to continue to provide legal representation to corporate institutions and individuals, where with a huge experience in various aspects of the law, I can provide excellent legal services comparable to none in the legal industry."
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/jeronasiedu/iamlarbi/blob/main/public/lawyer-larbi.png?raw=true"
+    />
 
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://imlarbilaw.com" />
+    <meta property="twitter:title" content="Lawyer Isaac M. Larbi" />
+    <meta
+      property="twitter:description"
+      content="With almost twenty (20) years of legal and management experience, my objective is to continue to provide legal representation to corporate institutions and individuals, where with a huge experience in various aspects of the law, I can provide excellent legal services comparable to none in the legal industry."
+    />
+    <meta
+      property="twitter:image"
+      content="https://github.com/jeronasiedu/iamlarbi/blob/main/public/lawyer-larbi.png?raw=true"
+    />
+  </head>
+
+  <body>
+    <style>
+      .spinner {
+        width: 56px;
+        height: 56px;
+        display: grid;
+        border-radius: 50%;
+        -webkit-mask: radial-gradient(farthest-side, #0000 40%, #2bbaaa 41%);
+        background: linear-gradient(
+              0deg,
+              rgba(43, 186, 170, 0.5) 50%,
+              rgba(43, 186, 170, 1) 0
+            )
+            center/4.5px 100%,
+          linear-gradient(
+              90deg,
+              rgba(43, 186, 170, 0.25) 50%,
+              rgba(43, 186, 170, 0.75) 0
+            )
+            center/100% 4.5px;
+        background-repeat: no-repeat;
+        animation: spinner-d3o0rx 1s infinite steps(12);
+      }
+
+      .spinner::before,
+      .spinner::after {
+        content: "";
+        grid-area: 1/1;
+        border-radius: 50%;
+        background: inherit;
+        opacity: 0.915;
+        transform: rotate(30deg);
+      }
+
+      .spinner::after {
+        opacity: 0.83;
+        transform: rotate(60deg);
+      }
+
+      @keyframes spinner-d3o0rx {
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+      .spinner-container {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #root:empty + .spinner-container {
+        display: block;
+      }
+    </style>
+    <div id="root"></div>
+    <div class="spinner-container">
+      <div class="spinner"></div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
