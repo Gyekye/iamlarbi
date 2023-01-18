@@ -10,6 +10,7 @@ import React from "react"
 import moment1 from "../assets/meet1.jpeg"
 import moment2 from "../assets/meet2.jpg"
 import moment3 from "../assets/meet3.jpg"
+import moment8 from "../assets/meet4.jpg"
 import moment7 from "../assets/slide1.jpg"
 import moment6 from "../assets/slide2.jpg"
 import moment4 from "../assets/slide3.jpg"
@@ -29,11 +30,7 @@ const Gallery = () => {
       image: moment3,
       description: "Lawyer Larbi and Daughters of Glorious Jesus",
     },
-    {
-      image: moment4,
-      description:
-        "Lawyer Larbi with Congresswoman Shiela Jackson Lee(middle) representing Texas 18th Congressional District, USA",
-    },
+
     {
       image: moment5,
       description:
@@ -48,6 +45,15 @@ const Gallery = () => {
       image: moment7,
       description:
         "Lawyer Larbi emerging from the high court with other lawyers",
+    },
+    {
+      image: moment8,
+      description: "Lawyer Larbi interacting with his client",
+    },
+    {
+      image: moment4,
+      description:
+        "Lawyer Larbi with Congresswoman Shiela Jackson Lee(middle) representing Texas 18th Congressional District, USA",
     },
   ]
   return (
@@ -73,10 +79,10 @@ const Gallery = () => {
             />
             <Text
               _dark={{
-                bg: "blackAlpha.100",
+                bg: "red.500",
               }}
               p={2}
-              bg="brand.50"
+              bg="red.100"
               fontSize="md"
             >
               {item.description}

@@ -57,7 +57,7 @@ const Contact = () => {
               type="text"
               isRequired
             />
-            <FormHelperText>We'll never share your email.</FormHelperText>
+            <FormHelperText>We'll never share your message.</FormHelperText>
           </FormControl>
           <Button type="submit" w="full">
             Send Message

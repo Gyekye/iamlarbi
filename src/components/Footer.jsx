@@ -23,7 +23,7 @@ const Footer = () => {
   ]
   return (
     <Box
-      bg="brand.50"
+      bg="red.100"
       _dark={{
         bg: "blackAlpha.100",
       }}

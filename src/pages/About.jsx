@@ -1,7 +1,22 @@
-import { Container, Heading, Text, VStack } from "@chakra-ui/react"
+import {
+  Box,
+  Container,
+  Heading,
+  Image,
+  SimpleGrid,
+  Text,
+  VStack,
+} from "@chakra-ui/react"
 import React from "react"
+import image6 from "../assets/gallery-person-2.jpeg"
+import image5 from "../assets/gallery-person-3.jpeg"
+import image4 from "../assets/gallery-person-4.jpeg"
+import image1 from "../assets/hero.png"
+import image2 from "../assets/larbi.jpeg"
+import image3 from "../assets/slide5.jpeg"
 
 const About = () => {
+  const personalPictures = [image1, image2, image3, image4, image5, image6]
   return (
     <Container maxW="7xl">
       <Heading textAlign="center" textTransform="uppercase" spacing={5} mb={5}>
@@ -77,6 +92,32 @@ const About = () => {
           GMJ 202 SC.”
         </Text>
       </VStack>
+      <SimpleGrid
+        w="full"
+        columns={[1, 2, 3]}
+        spacing={6}
+        spacingY={14}
+        mb={10}
+      >
+        {personalPictures.map((picture, index) => (
+          <Box
+            alignSelf="center"
+            w="xs"
+            h="xs"
+            rounded="full"
+            overflow="hidden"
+            key={index}
+          >
+            <Image
+              w="full"
+              h="full"
+              objectFit="cover"
+              src={picture}
+              alt="Lawyer Larbi"
+            />
+          </Box>
+        ))}
+      </SimpleGrid>
     </Container>
   )
 }

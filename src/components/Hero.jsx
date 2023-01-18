@@ -108,7 +108,7 @@ const Hero = () => {
           <Box
             w={["xs", "sm", "md"]}
             h={["xs", "sm", "md"]}
-            bg="brand.100"
+            bg="red.100"
             pos="relative"
             overflow="hidden"
             rounded="full"
