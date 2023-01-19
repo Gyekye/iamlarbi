@@ -1,4 +1,5 @@
 import {
+  Heading,
   HStack,
   IconButton,
   Link,
@@ -49,7 +50,9 @@ const Navigation = () => {
   const themeIcon = useColorModeValue(<BiMoon size={22} />, <BiSun size={22} />)
   return (
     <HStack py="3" px={[3, 6, 8]} shadow="sm" as="nav" mb={10}>
-      <Link href="/">EAGLE CHAMBERS</Link>
+      <Heading size="md" color="brand.500" as={NavLink} to="/">
+        Lawyer Larbi
+      </Heading>
       <Spacer />
       <HStack spacing={[4, 5, 7, 10]}>
         <HStack spacing={[4, 5, 7, 10]} display={["none", "none", "block"]}>
