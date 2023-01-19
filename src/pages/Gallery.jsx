@@ -79,7 +79,7 @@ const Gallery = () => {
             />
             <Text
               _dark={{
-                bg: "red.500",
+                bg: "blackAlpha.100",
               }}
               p={2}
               bg="red.100"

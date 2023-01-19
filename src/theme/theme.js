@@ -61,6 +61,10 @@ const theme = extendTheme(
   },
   withDefaultColorScheme({
     colorScheme: "brand",
+  }),
+  withDefaultColorScheme({
+    colorScheme: "red",
+    components: ["Button", "Link"],
   })
 )
 export default theme
