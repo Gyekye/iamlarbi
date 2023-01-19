@@ -50,7 +50,7 @@ const Navigation = () => {
   const themeIcon = useColorModeValue(<BiMoon size={22} />, <BiSun size={22} />)
   return (
     <HStack py="3" px={[3, 6, 8]} shadow="sm" as="nav" mb={10}>
-      <Heading size="md" color="brand.500" as={NavLink} to="/">
+      <Heading size="md" as={NavLink} to="/">
         Lawyer Larbi
       </Heading>
       <Spacer />
