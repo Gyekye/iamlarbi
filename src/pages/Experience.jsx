@@ -9,7 +9,7 @@ const Experience = () => {
   const bgColor = useColorModeValue("#94e8e7", "#00383f")
   const textColor = useColorModeValue("#000", "#ffffff")
   const iconColor = useColorModeValue("#fff", "#fff")
-  const iconBg = useColorModeValue("#2bbaaa", "#2bbaaa")
+  const iconBg = useColorModeValue("rgb(230, 54, 5)", "rgb(230, 54, 5)")
   const experiences = [
     {
       date: "2002 - 2003",
@@ -69,7 +69,7 @@ const Experience = () => {
   return (
     <VStack mb={10}>
       <Heading>My Experiences</Heading>
-      <VerticalTimeline lineColor="#2bbaaa">
+      <VerticalTimeline lineColor="#fed7d7">
         {experiences.map((experience, index) => (
           <VerticalTimelineElement
             contentStyle={{ background: bgColor, color: textColor }}
