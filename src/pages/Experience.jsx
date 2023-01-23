@@ -1,10 +1,7 @@
-import { Heading, Text, useColorModeValue, VStack } from "@chakra-ui/react"
+import { Container, Heading, useColorModeValue, VStack } from "@chakra-ui/react"
 import React from "react"
-import { BiBriefcase, BiStar } from "react-icons/all"
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component/dist-modules"
+import { BiBriefcase } from "react-icons/all"
+import pdf from '../assets/cv.pdf'
 const Experience = () => {
   const bgColor = useColorModeValue("#94e8e7", "#00383f")
   const textColor = useColorModeValue("#000", "#ffffff")
@@ -66,28 +63,29 @@ const Experience = () => {
       icon: <BiBriefcase />,
     },
   ]
+  
   return (
-    <VStack mb={10}>
-      <Heading>My Experiences</Heading>
-      <VerticalTimeline lineColor="#fed7d7">
-        {experiences.map((experience, index) => (
-          <VerticalTimelineElement
-            contentStyle={{ background: bgColor, color: textColor }}
-            contentArrowStyle={{ borderRight: `7px solid  ${bgColor}` }}
-            date={experience.date}
-            iconStyle={{ background: iconBg, color: iconColor }}
-            icon={experience.icon}
-          >
-            <Heading as="h3">{experience.title}</Heading>
-            <Text>{experience.text}</Text>
-          </VerticalTimelineElement>
-        ))}
-        <VerticalTimelineElement
-          iconStyle={{ background: iconBg, color: iconColor }}
-          icon={<BiStar />}
-        />
-      </VerticalTimeline>
-    </VStack>
+    <Container maxW="7xl">
+      <VStack mb={10} w="full" minH='100vh'>
+        <Heading>My Experiences</Heading>
+        <object
+          data={pdf}
+          type="application/pdf"
+          width="100%"
+          height="100%"
+          style={{
+            minHeight:"98vh"
+          }}
+        >
+          <p>
+            Alternative text - include a link{" "}
+            <a href="http://africau.edu/images/default/sample.pdf">
+              to the PDF!
+            </a>
+          </p>
+        </object>
+      </VStack>
+    </Container>
   )
 }
 

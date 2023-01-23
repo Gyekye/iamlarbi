@@ -10,7 +10,7 @@ import {
   Show,
   Spacer,
   useColorMode,
-  useColorModeValue,
+  useColorModeValue
 } from "@chakra-ui/react"
 import React from "react"
 import { BiMoon, BiSun, CgMenu } from "react-icons/all"
@@ -55,7 +55,7 @@ const Navigation = () => {
       </Heading>
       <Spacer />
       <HStack spacing={[4, 5, 7, 10]}>
-        <HStack spacing={[4, 5, 7, 10]} display={["none", "none", "block"]}>
+        <HStack spacing={[4, 5, 7, 10]} display={["none", "none","flex" ]}>
           {links.map((item, idx) => (
             <Link
               as={NavLink}

@@ -18,11 +18,6 @@ import moment5 from "../assets/slide4.jpg"
 const Gallery = () => {
   const moments = [
     {
-      image: moment1,
-      description:
-        "Lawyer Larbi emerging from the High Court with other lawyers",
-    },
-    {
       image: moment2,
       description: "Lawyer Larbi and Francis Adjei, a renowned Gospel Musician",
     },
@@ -54,6 +49,11 @@ const Gallery = () => {
       image: moment4,
       description:
         "Lawyer Larbi with Congresswoman Shiela Jackson Lee(middle) representing Texas 18th Congressional District, USA",
+    },
+    {
+      image: moment1,
+      description:
+        "Lawyer Larbi with his mates. From left to right, His Lordship Justice Eric Ansah, Hon. Alfred Tua Yeboah, the Deputy Attorney General and Lawyer Isaac Minta Larbi",
     },
   ]
   return (
