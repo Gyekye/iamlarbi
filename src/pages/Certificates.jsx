@@ -5,7 +5,7 @@ import {
   Image,
   SimpleGrid,
   Text,
-  VStack,
+  VStack
 } from "@chakra-ui/react"
 import React from "react"
 import cert1 from "../assets/gallery-cert-1.jpeg"
@@ -40,7 +40,7 @@ const Certificates = () => {
     },
     {
       title: "Certificate of Honor",
-      text: "Issued by GHANA SCHOOL OF LAW for playing the role of an OPENING COMMITTEE CHAIRMAN",
+      text: "Issued by GHANA SCHOOL OF LAW for playing the role of an OPENINGs COMMITTEE CHAIRMAN",
       image: cert5,
     },
     {
