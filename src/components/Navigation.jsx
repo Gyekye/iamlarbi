@@ -55,7 +55,7 @@ const Navigation = () => {
       </Heading>
       <Spacer />
       <HStack spacing={[4, 5, 7, 10]}>
-        <HStack spacing={[4, 5, 7, 10]} display={["none", "none", "none"]}>
+        <HStack spacing={[4, 5, 7, 10]} display={["none", "none","flex" ]}>
           {links.map((item, idx) => (
             <Link
               as={NavLink}
@@ -73,7 +73,7 @@ const Navigation = () => {
           variant="ghost"
           onClick={toggleColorMode}
         />
-        <Show breakpoint="(max-width: 62em)">
+        <Show breakpoint="(max-width: 767px)">
           <Menu>
             <MenuButton
               as={IconButton}
