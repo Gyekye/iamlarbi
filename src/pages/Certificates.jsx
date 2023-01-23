@@ -87,8 +87,7 @@ const Certificates = () => {
                 {cert.title}
               </Heading>
               <Text>
-                Issued by PEARSON PEACEKEEPING CENTER for the completion of
-                MYTHS AND REALITY
+                {cert.text}
               </Text>
             </VStack>
           ))}
