@@ -5,7 +5,7 @@ import {
   Image,
   SimpleGrid,
   Text,
-  VStack
+  VStack,
 } from "@chakra-ui/react"
 import React from "react"
 import cert1 from "../assets/gallery-cert-1.jpeg"
@@ -74,21 +74,19 @@ const Certificates = () => {
         >
           {certificates.map((cert, index) => (
             <VStack key={index} alignItems="flex-start" w="full" h="md">
-              <Box
-                alignSelf="center"
-                w="xs"
-                h="xs"
-                rounded="full"
-                overflow="hidden"
-              >
-                <Image w="full" h="full" objectFit="cover" src={cert.image} />
+              <Box w="full" h="xs" overflow="hidden">
+                <Image
+                  w="full"
+                  h="full"
+                  objectFit="cover"
+                  transform="rotate(-90deg)"
+                  src={cert.image}
+                />
               </Box>
               <Heading size="lg" color="brand.500">
                 {cert.title}
               </Heading>
-              <Text>
-                {cert.text}
-              </Text>
+              <Text>{cert.text}</Text>
             </VStack>
           ))}
         </SimpleGrid>
