@@ -54,8 +54,8 @@ const Certificates = () => {
       image: cert7,
     },
     {
-      title: "Certificate",
-      text: "Issued by PEARSON PEACEKEEPING CENTER for the completion of MYTHS AND REALITY",
+      title: "The Grossman Scholarship",
+      text: "Issued by American University Washington College of Law",
       image: cert8,
     },
   ]
@@ -79,7 +79,6 @@ const Certificates = () => {
                   w="full"
                   h="full"
                   objectFit="cover"
-                  transform="rotate(-90deg)"
                   src={cert.image}
                 />
               </Box>

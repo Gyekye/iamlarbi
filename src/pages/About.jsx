@@ -104,14 +104,14 @@ const About = () => {
             alignSelf="center"
             w="xs"
             h="xs"
-            rounded="full"
+            rounded="md"
             overflow="hidden"
             key={index}
           >
             <Image
               w="full"
               h="full"
-              objectFit="cover"
+              objectFit="fit"
               src={picture}
               alt="Lawyer Larbi"
             />

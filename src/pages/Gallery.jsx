@@ -43,7 +43,7 @@ const Gallery = () => {
     },
     {
       image: moment8,
-      description: "Lawyer Larbi interacting with his client",
+      description: "Lawyer Larbi interacting with his clients",
     },
     {
       image: moment4,
