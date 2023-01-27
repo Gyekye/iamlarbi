@@ -1187,6 +1187,18 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.6.tgz#cee20bd55e68a1720bdab363ecf0c821ded4cd45"
   integrity sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==
 
+"@react-buddy/ide-toolbox@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@react-buddy/ide-toolbox/-/ide-toolbox-2.3.1.tgz#4e3815eab3198dddcb360b9874640dbd468cb870"
+  integrity sha512-xH4rVPvG8nADggIFJk3mlAQtZg05HwhPcsdnPhHw9JMuxSQi8qXG+0ImQSS58QjIFY9BGtAv2geAbIPBuh9q0w==
+
+"@react-buddy/palette-chakra-ui@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@react-buddy/palette-chakra-ui/-/palette-chakra-ui-2.3.1.tgz#be7b6852d0c13165722aef250aa608b423f08b35"
+  integrity sha512-2cqAPbeoVNz5nCozfbReORFcCVO3K/b0T6oVhOaOQgCr79uPKv97ljntM++pFI4jLkKS+HpDWN08E/7X4l4gnQ==
+  dependencies:
+    "@react-buddy/ide-toolbox" "^2.3.1"
+
 "@react-pdf/fns@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@react-pdf/fns/-/fns-2.0.0.tgz#fb7fc9373fdb74428b6af6949b3c67fb4b4e23e4"

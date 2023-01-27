@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.10.5",
     "@fontsource/nunito": "^4.5.11",
     "@fontsource/work-sans": "^4.5.12",
+    "@react-buddy/ide-toolbox": "^2.3.1",
     "@react-pdf/renderer": "^3.0.3",
     "framer-motion": "^8.4.3",
     "react": "^18.2.0",
@@ -21,7 +22,8 @@
     "react-icons": "^4.7.1",
     "react-pdf": "^6.2.2",
     "react-router-dom": "^6.6.2",
-    "swiper": "^8.4.6"
+    "swiper": "^8.4.6",
+    "@react-buddy/palette-chakra-ui": "^2.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

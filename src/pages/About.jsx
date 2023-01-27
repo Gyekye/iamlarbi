@@ -1,22 +1,68 @@
 import {
   Box,
   Container,
-  Heading,
+  Heading, HStack, IconButton,
   Image,
   SimpleGrid,
-  Text,
+  Text, useMediaQuery,
   VStack,
 } from "@chakra-ui/react"
-import React from "react"
+import React, {useCallback, useRef} from "react"
 import image6 from "../assets/gallery-person-2.jpeg"
 import image5 from "../assets/gallery-person-3.jpeg"
 import image4 from "../assets/gallery-person-4.jpeg"
 import image1 from "../assets/hero.png"
 import image2 from "../assets/larbi.jpeg"
 import image3 from "../assets/slide5.jpeg"
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Autoplay} from "swiper";
+import {BiLeftArrow, BiRightArrow} from "react-icons/all.js";
+import {useNavigate} from "react-router-dom";
 
 const About = () => {
-  const personalPictures = [image1, image2, image3, image4, image5, image6]
+  const slides = [
+    {
+      image: image1,
+      title: "The guy who is always ready to help",
+    },
+    {
+      image: image2,
+      title: "The guy who is always ready to help",
+    },
+    {
+      image: image3,
+      title: "The guy who is always ready to help",
+    },
+    {
+      image: image4,
+      title: "The guy who is always ready to help",
+    },
+    {
+      image: image5,
+      title: "The guy who is always ready to help",
+    },
+  ]
+
+  const [isDesktop] = useMediaQuery("(min-width: 976px)")
+  const [isTablet] = useMediaQuery("(min-width:768px)")
+  const navigate = useNavigate()
+  const getSlidesPerView = () => {
+    if (isDesktop) {
+      return 3
+    } else if (isTablet) {
+      return 2
+    } else return 1
+  }
+  const sliderRef = useRef(null)
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return
+    sliderRef.current.swiper.slidePrev()
+  }, [])
+
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return
+    sliderRef.current.swiper.slideNext()
+  }, [])
   return (
     <Container maxW="7xl">
       <Heading textAlign="center" textTransform="uppercase" spacing={5} mb={5}>
@@ -92,32 +138,37 @@ const About = () => {
           GMJ 202 SC.”
         </Text>
       </VStack>
-      <SimpleGrid
-        w="full"
-        columns={[1, 2, 3]}
-        spacing={6}
-        spacingY={14}
-        mb={10}
+      <Swiper
+          loop={true}
+          grabCursor
+          slidesPerView={getSlidesPerView()}
+          spaceBetween={20}
+          modules={[Autoplay]}
+          speed={1000}
+          ref={sliderRef}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: true,
+          }}
       >
-        {personalPictures.map((picture, index) => (
-          <Box
-            alignSelf="center"
-            w="xs"
-            h="xs"
-            rounded="md"
-            overflow="hidden"
-            key={index}
-          >
-            <Image
-              w="full"
-              h="full"
-              objectFit="fit"
-              src={picture}
-              alt="Lawyer Larbi"
-            />
-          </Box>
+        {slides.map((slide, i) => (
+            <SwiperSlide key={i}>
+              <Box w="full" h={["xs", "sm"]}>
+                <Image
+                    w="full"
+                    rounded="md"
+                    h="full"
+                    objectFit="contain"
+                    src={slide.image}
+                />
+              </Box>
+            </SwiperSlide>
         ))}
-      </SimpleGrid>
+      </Swiper>
+      <HStack justifyContent="space-between" mt={5}>
+        <IconButton icon={<BiLeftArrow />} onClick={handlePrev} />
+        <IconButton icon={<BiRightArrow />} onClick={handleNext} />
+      </HStack>
     </Container>
   )
 }
