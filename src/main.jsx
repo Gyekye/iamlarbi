@@ -18,18 +18,12 @@ import "swiper/css"
 import "swiper/css/navigation"
 import App from "./App"
 import theme from "./theme/theme"
-import {DevSupport} from "@react-buddy/ide-toolbox";
-import {ComponentPreviews, useInitial} from "./dev";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
         <ChakraProvider theme={theme}>
             <React.StrictMode>
-                <DevSupport ComponentPreviews={ComponentPreviews}
-                            useInitialHook={useInitial}
-                >
                     <App/>
-                </DevSupport>
             </React.StrictMode>
         </ChakraProvider>
     </BrowserRouter>
