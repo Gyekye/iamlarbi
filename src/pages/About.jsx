@@ -70,7 +70,7 @@ const About = () => {
       </Heading>
       <VStack mb={5}>
         <Heading alignSelf="flex-start">Life & Education</Heading>
-        <Text>
+        <Text lineHeight={8}>
           Mr. Isaac Minta Larbi attended his primary school at Good News
           International School at Adweso a town sharing boundary with Koforidua.
           He proceeded to obtain his “O” Level and “A” Level Certificates from
