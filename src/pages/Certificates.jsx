@@ -19,9 +19,24 @@ import cert8 from "../assets/gallery-cert-8.jpeg"
 const Certificates = () => {
   const certificates = [
     {
+      title: "Certificate of Honor",
+      text: "Issued by GHANA SCHOOL OF LAW for playing the role of an OPENINGs COMMITTEE CHAIRMAN",
+      image: cert5,
+    },
+    {
+      title: "Certificate",
+      text: "Issued by INTERNATIONAL LAW INSTITUTE for the completion of the FOUNDATION TO LEGAL ENGLISH SEMINAR",
+      image: cert4,
+    },
+    {
+      title: "The Grossman Scholarship",
+      text: "Issued by American University Washington College of Law",
+      image: cert8,
+    },
+    {
       title: "Academic Certificate",
-      text: "Issued by PEARSON PEACEKEEPING CENTER for the completion of MYTHS AND REALITY",
-      image: cert1,
+      text: "Issued by AMERICAN UNIVERSITY WASHINGTON COLLEGE for His DEDICATION TOWARDS LAW",
+      image: cert7,
     },
     {
       title: "Academic Certificate",
@@ -30,33 +45,18 @@ const Certificates = () => {
     },
     {
       title: "Academic Certificate",
+      text: "Issued by PEARSON PEACEKEEPING CENTER for the completion of MYTHS AND REALITY",
+      image: cert1,
+    },
+    {
+      title: "Academic Certificate",
       text: "Issued by SPECIAL COURT OF SIERRA LEONE for the completion of research in LEGAL RESEARCH & WRITING",
       image: cert3,
-    },
-    {
-      title: "Certificate",
-      text: "Issued by INTERNATIONAL LAW INSTITUTE for the completion of the FOUNDATION TO LEGAL ENGLISH SEMINAR",
-      image: cert4,
-    },
-    {
-      title: "Certificate of Honor",
-      text: "Issued by GHANA SCHOOL OF LAW for playing the role of an OPENINGs COMMITTEE CHAIRMAN",
-      image: cert5,
     },
     {
       title: "Academic Certificate",
       text: "Issued by PEARSON PEACEKEEPING TRAINING CENTER for the completion of COMPANY OF CODE CHEER",
       image: cert6,
-    },
-    {
-      title: "Academic Certificate",
-      text: "Issued by AMERICAN UNIVERSITY WASHINGTON COLLEGE for His DEDICATION TOWARDS LAW",
-      image: cert7,
-    },
-    {
-      title: "The Grossman Scholarship",
-      text: "Issued by American University Washington College of Law",
-      image: cert8,
     },
   ]
   return (
