@@ -1,24 +1,23 @@
 import {
   Box,
   Container,
-  Heading,
-  HStack,
-  IconButton,
+  Heading, HStack, IconButton,
   Image,
-  Text,
-  useMediaQuery,
+  SimpleGrid,
+  Text, useMediaQuery,
   VStack,
 } from "@chakra-ui/react"
-import React, { useCallback, useRef } from "react"
-import { BiLeftArrow, BiRightArrow } from "react-icons/all.js"
-import { useNavigate } from "react-router-dom"
-import { Autoplay } from "swiper"
-import { Swiper, SwiperSlide } from "swiper/react"
+import React, {useCallback, useRef} from "react"
+import image6 from "../assets/gallery-person-2.jpeg"
 import image5 from "../assets/gallery-person-3.jpeg"
 import image4 from "../assets/gallery-person-4.jpeg"
 import image1 from "../assets/hero.png"
 import image2 from "../assets/larbi.jpeg"
 import image3 from "../assets/slide5.jpeg"
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Autoplay} from "swiper";
+import {BiLeftArrow, BiRightArrow} from "react-icons/all.js";
+import {useNavigate} from "react-router-dom";
 
 const About = () => {
   const slides = [
@@ -140,30 +139,30 @@ const About = () => {
         </Text>
       </VStack>
       <Swiper
-        loop={true}
-        grabCursor
-        slidesPerView={getSlidesPerView()}
-        spaceBetween={20}
-        modules={[Autoplay]}
-        speed={1000}
-        ref={sliderRef}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: true,
-        }}
+          loop={true}
+          grabCursor
+          slidesPerView={getSlidesPerView()}
+          spaceBetween={20}
+          modules={[Autoplay]}
+          speed={1000}
+          ref={sliderRef}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: true,
+          }}
       >
         {slides.map((slide, i) => (
-          <SwiperSlide key={i}>
-            <Box w="full" h={["xs", "sm"]}>
-              <Image
-                w="full"
-                rounded="md"
-                h="full"
-                objectFit="contain"
-                src={slide.image}
-              />
-            </Box>
-          </SwiperSlide>
+            <SwiperSlide key={i}>
+              <Box w="full" h={["xs", "sm"]}>
+                <Image
+                    w="full"
+                    rounded="md"
+                    h="full"
+                    objectFit="contain"
+                    src={slide.image}
+                />
+              </Box>
+            </SwiperSlide>
         ))}
       </Swiper>
       <HStack justifyContent="space-between" mt={5}>
