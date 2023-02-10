@@ -15,6 +15,8 @@ import moment7 from "../assets/slide1.jpg"
 import moment6 from "../assets/slide2.jpg"
 import moment4 from "../assets/slide3.jpg"
 import moment5 from "../assets/slide4.jpg"
+import moment9 from "../assets/addis.jpeg"
+import moment10 from "../assets/addis.jpeg"
 const Gallery = () => {
   const moments = [
     {
@@ -54,6 +56,10 @@ const Gallery = () => {
       image: moment1,
       description:
         "Lawyer Larbi with his mates. From left to right, His Lordship Justice Eric Ansah, Hon. Alfred Tua Yeboah, the Deputy Attorney General and Lawyer Isaac Minta Larbi",
+    },    {
+      image: moment9,
+      description:
+        "African Union Headquarters, Addis Ababa , Ethiopia 2016",
     },
   ]
   return (
@@ -61,7 +67,7 @@ const Gallery = () => {
       <Heading textAlign="center" mb={8}>
         Key moments with Mr. Larbi
       </Heading>
-      <SimpleGrid w="full" columns={[1, 2, 3, 4]} spacing={8}>
+      <SimpleGrid w="full" columns={[1, 2, 3, 3]} spacing={8}>
         {moments.map((item, index) => (
           <VStack
             pos="relative"
