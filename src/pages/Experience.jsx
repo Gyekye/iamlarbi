@@ -567,7 +567,7 @@ const Experience = () => {
                 <br />
                 <br />
                 <Heading alignSelf={'start '}>MANAGEMENT TRAINING AND CERTIFICATION:</Heading>
-                <Text size="md">
+                <Text size="md" alignSelf={'start'}>
                     • Store Manager Certification, Sherwin Williams University, Atlanta,
                     Georgia, USA Date: 23rd March, 2007. <br/> • Manager Trainee,
                     Management Training Program, Sherwin Williams University, Atlanta,
