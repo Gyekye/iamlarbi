@@ -3,8 +3,8 @@ import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react"
 const theme = extendTheme(
   {
     fonts: {
-      heading: `'nunito', sans-serif`,
-      body: `'work sans', sans-serif`,
+      heading: `'Open Sans', sans-serif`,
+      body: `'Open Sans', sans-serif`,
     },
     colors: {
       brand: {
